@@ -1,0 +1,305 @@
+登陆： 15269921709   921709
+
+1.	Request URL: http://fw.lepay.vip/login/tokenLogin
+	Request Method: POST
+	Content Type: application/json; charset=utf-8
+	
+	request headers
+		Content-Type: application/x-www-form-urlencoded
+ 		Content-Length: 67
+ 		Host: payment.mobzhifu.com
+ 		Connection: Keep-Alive
+ 		Accept-Encoding: gzip,deflate
+ 		User-Agent: okhttp/4.1.1
+ 	
+ 	request body
+ 		phone=15269921709&pass=921709&sign=B3A8E759C42A2D19D94C43F9D2883307
+
+ 	response headers
+ 		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 105
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 14:25:46 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+
+	 response body
+		成功:{"code":"000000","data":{"token":"202150c78f708e280de8cecfec4c906b"},"msg":"请求成功"}
+		失败：{"code":600001,"data":[],"msg":"员工账号不存在,请检查"}
+
+
+
+2.  Request URL: http://fw.lepay.vip/Pay/WxFacePay/getadvert
+	Request Method: POST
+	Content Type: application/json; charset=utf-8
+
+	request headers
+		Accept-Encoding: gzip,deflate
+		Connection: Keep-Alive
+		Content-Length: 83
+		Content-Type: application/x-www-form-urlencoded
+		Host: payment.mobzhifu.com
+		User-Agent: okhttp/4.1.1
+ 	
+ 	request body
+		type=2&token=202150c78f708e280de8cecfec4c906b&sign=DC6A342B7AFFD0116A6834C85DA23670
+
+ 	response headers
+ 		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 213
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 14:25:47 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+
+	 response body
+		 成功：{"code":"000000","data":[{"id":4,"format":1,"interval":2,"imgurl":["http:\/\/payment.mobzhifu.com\/uploads\/2\/2\/image\/2019092619264184c766732.jpg","http:\/\/payment.mobzhifu.com\/uploads\/2\/2\/image\/2019092619264121f437950.jpg","http:\/\/payment.mobzhifu.com\/uploads\/2\/2\/image\/201909261909254a9fe8543.JPG"],"img":["uploads\/2\/2\/image\/2019092619264184c766732.jpg","uploads\/2\/2\/image\/2019092619264121f437950.jpg","uploads\/2\/2\/image\/201909261909254a9fe8543.JPG"],"name":1}],"msg":"成功"}
+
+		 失败：{"code":"200006","data":[],"msg":"失败"}
+
+
+
+3.  Request URL: http://fw.lepay.vip/Pay/WxFacePay/getWxpayfaceAuthinfo（这个接口是web去访问https://payapp.weixin.qq.com/face/get_wxpayface_authinfo拿到数据返回给移动端）
+	Request Method: POST
+	Content Type: application/json; charset=utf-8
+
+	request headers：
+		Accept-Encoding: gzip,deflate
+		Connection: Keep-Alive
+		Content-Length: 992
+		Content-Type: application/x-www-form-urlencoded
+		Host: payment.mobzhifu.com
+		User-Agent: okhttp/4.1.1
+ 	
+ 	request body：（这个值是从微信那边拿到的）
+		rawdata=W%2BK2D5uM3HaBzfS7fIcH0HUZ9fgekCDWvF9wI48tmYyp4FgWi%2F7tLnWY1moEwmW43joGcOKc3vqCN4wu4ppPLbrs%2FlFT1SMl6jv77%2Fzen0JBmjWUqJnhsfvBKM8FynqKv2WcTyjiazx8MGqC%2FOhybh6vRcSAz2TGQo9nZjP5EgqLqd8CS0WalKG04VAVlEQ1qYqCCGzylY1Tv1xRKq%2FcTTasn7BYVKY2DyOVA7Gx7AqJdbdATW5wJ%2BpY97%2Blqjw8ysBRtdf7DxdCEg8Xx%2BDH9oTNL%2BwTTrF0UIbhsRdbydA3nR6nWRH8snoqfcjSF5Mkg6KEgEdWPzSMjA56ahJGUtKdFhFD%2BSPeiXGbIMEti7becvFKLbUyKE3kKyitowK%2BLVlm3sYl1GfgL01GQZiWyuGSWXzHTqBQHbehkcvo0cdU7RcOiKoMF9LF4VTv4aDKmPYjkiioJLO5feWVl%2BkB%2BRK1dIIL%2BoaBe%2FU3Nepp8ebu430xHcMTuCLI1YIYcmdEv8HJX66CDVyy31Ek8IBxIxmHzq2wYEOWmJRyPvdg3cj2FRuFZb%2BYVNaYEYBoJhO6XNZ0tvbH2ADiXOfs9KZRyt30J9hf6pruaeql%2B4soDC1ge5oizmKqqsdHOc99Emos6C6H2TySMF44Y5EJ%2Bi6j1jib7L%2BtUhIwb2epr%2B5G8kAFtNkWLggK%2Borky0rrbwnrp1FNtSTF5Yk9Kh%2BNHmQSRAdBMyKpIl9FxV8QEJt7CBMmoBaZO1gNe1lv%2B5Npdt6pAlafKqr1XWlv9xxfkuVeYVK5zJT7SQy4VgT%2Fz1CzZTNe806MaEpz5mfOYExO90v4U51raUah&device_id=TZH-L1&token=202150c78f708e280de8cecfec4c906b&sign=3F240D9B3AFE86FA810FB8753C74954D
+
+ 	response headers：
+ 		Access-Control-Allow-Headers: x-requested-with,content-type
+		Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE
+		Access-Control-Allow-Origin: *
+		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 723
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 14:25:49 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+
+	 response body：
+		成功：{"code":"000000","data":{"authinfo":"AGNW2ncQT8bXqoBW0Ul821xPZhXDIraX3xiEmEtWj+6Wjm24KRdCojOLshzgMkzD7yO6NLwXgN\/G0IGz2+CiLQlUPnBSSdVQfopqJWc0O2+qrR2Y\/czm1MAlpM3XGTKB4eSRcYeZqoDKhXfuUre8LbTnJeWGFoAzIsodSSAlhDU8ptVIfovQohfIpo\/XzyDFK42G+lDZpcuQKQc2DRyhH1D42ExErNu7sMRdfOWsayLpI4LckG2KxuVYMeCbzdIkRjDG3ulkVWuj1Ow5VcXnW6UQsoScf5u1FSJw+1vek2nowhBF+IWE7IC8VPIzv6PYqoA6YjfMrfH\/MCS1+1JJMTh9ZOQRmj2SCeLOYLrdIa6Pf3LTL5dRjrg+gzIQ\/TNrskMiAHG78TAn+VrJnKHn8ix2p\/v7\/ZjXez2SMgwvnJOIMZ+C4eMKrwIlZfLl7Aash8k\/MWCrZ9\/s1xa1KflFwxwrPLD+qNiX7H2bhoguSJEjxssjYu3Pfi1SjrWz2pfdRQHxoNwKmW2nGS3Ob8g01BnoKv\/GZii5FgQbbIZXLt2\/g3gaYteGyGTIwfKMcZB1drog6162nhp7b9Q8LAa+Kq6OpAlLkqu+eJKV6veZ\/EJjT0SFC93KDjWslri03pEKXChhj2D7UBap6A==","expires_in":"3600","appid":"wx57364f8d983fa108","mch_id":"1408799602","sub_appid":"","sub_mch_id":"1494970462","no":"face_1570199149"},"msg":"请求成功"}
+
+		失败：{"code":"200006","data":{},"msg":"失败"}
+
+
+
+4.	Request URL: http://fw.lepay.vip/Pay/WxFacePay/placeFace
+	Request Method: POST
+	Content Type: application/json; charset=utf-8
+
+	request headers：
+		Accept-Encoding: gzip,deflate
+		Connection: Keep-Alive
+		Content-Length: 87
+		Content-Type: application/x-www-form-urlencoded
+		Host: payment.mobzhifu.com
+		User-Agent: okhttp/4.1.1
+ 	
+ 	request body：
+		money=0.01&token=202150c78f708e280de8cecfec4c906b&sign=AA330511452684B150D185311E04E1C3
+
+
+ 	response headers：
+ 		Access-Control-Allow-Headers: x-requested-with,content-type
+		Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE
+		Access-Control-Allow-Origin: *
+		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 100
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 14:26:50 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+
+	 response body：
+		{"code":"000000","data":{"out_trade_no":"LS201910042226502000009"},"msg":"请求成功"}
+
+
+5.	Request URL: http://fw.lepay.vip/Pay/WxFacePay/facePay
+	Request Method: POST
+	Content Type: application/json; charset=utf-8
+
+	request headers：
+		Accept-Encoding: gzip,deflate
+		Connection: Keep-Alive
+		Content-Length: 199
+		Content-Type: application/x-www-form-urlencoded
+		Host: payment.mobzhifu.com
+		User-Agent: okhttp/4.1.1
+ 	
+ 	request body：
+		openid=ouaemjuVrXvrjWaCjJF9KVmM46Nw&code=cda7604e-84a2-4819-91c2-76c267fac9d1&money=1&out_trade_no=LS201910042226502000009&token=202150c78f708e280de8cecfec4c906b&sign=38BE6533A4463E40B40D8214ADE9828D
+
+ 	response headers：
+ 		Access-Control-Allow-Headers: x-requested-with,content-type
+		Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE
+		Access-Control-Allow-Origin: *
+		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 395
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 14:27:21 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+
+	 response body：
+		成功：{"code":"000000","data":{"return_code":"SUCCESS","return_msg":"OK","appid":"wx57364f8d983fa108","mch_id":"1408799602","sub_mch_id":"1494970462","nonce_str":"yOYCQRqzkWCGs6Oy","sign":"74E21D9FF39FD38FD95B17F9B79E2B2A","result_code":"SUCCESS","openid":"ouaemjuVrXvrjWaCjJF9KVmM46Nw","trade_type":"FACEPAY","bank_type":"CFT","total_fee":"1","fee_type":"CNY","transaction_id":"4200000398201910042620756607","out_trade_no":"LS201910042226502000009","attach":[],"time_end":"20191004222723","cash_fee":"1","cash_fee_type":"CNY","promotion_detail":"{}"},"msg":"请求成功"}
+
+		失败：没有处理
+
+
+
+
+
+下面是扫码支付：
+6.	Request URL: http://fw.lepay.vip/Pay/WxFacePay/QrCodePay
+	Request Method: POST
+	Content Type: application/json; charset=utf-8
+
+	request headers：
+		Accept-Encoding: gzip,deflate
+		Connection: Keep-Alive
+		Content-Length: 91
+		Content-Type: application/x-www-form-urlencoded
+		Host: payment.mobzhifu.com
+		User-Agent: okhttp/4.1.1
+ 	
+ 	request body：
+		 money=1&type=1&token=ed48b416c0ad4ed6f790e3974204b806&sign=D9866F1A6DCB96E56B22D4A983812E40
+
+
+ 	response headers：
+ 		Access-Control-Allow-Headers: x-requested-with,content-type
+		Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE
+		Access-Control-Allow-Origin: *
+		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 143
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 15:16:54 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+
+	 response body：
+		成功：{"code":"000000","data":{"qrcode":"weixin:\/\/wxpay\/bizpayurl?pr=sVc1QSp","out_trade_no":"LS201910042316543000002"},"msg":"请求成功"}
+		失败：没有处理
+
+
+7.	Request URL: http://fw.lepay.vip/Pay/WxFacePay/QueryOrder （这个接口是一个循环接口 比较快 需要付款完毕或倒计时结束才停止）
+	Request Method: POST
+	Content Type: application/json; charset=utf-8
+
+	request headers：
+		Accept-Encoding: gzip,deflate
+		Connection: Keep-Alive
+		Content-Length: 113
+		Content-Type: application/x-www-form-urlencoded
+		Host: payment.mobzhifu.com
+		User-Agent: okhttp/4.1.1
+ 	
+ 	request body：
+		out_trade_no=LS201910042316543000002&token=ed48b416c0ad4ed6f790e3974204b806&sign=CC98DCF37DF7DA7A86FEDDE683E4E15E
+
+ 	response headers：
+ 		Access-Control-Allow-Headers: x-requested-with,content-type
+		Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE
+		Access-Control-Allow-Origin: *
+		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 135
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 15:17:20 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+
+	 response body：
+	 	成功：等待付款：{"code":"000000","data":{"order_state":"WAIT_BUYER_PAY","out_trade_no":"LS201910042316543000002","tradedate":0},"msg":"请求成功"}
+	 		 付款完毕：{"code":"000000","data":{"order_state":"SUCCESS","out_trade_no":"LS201910042316543000002","tradedate":1570202242},"msg":"请求成功"}
+	 	失败：没有处理
+
+
+8.	Request URL: http://fw.lepay.vip/Pay/WxFacePay/closeOrder
+	Request Method: POST
+	Content Type: application/json; charset=utf-8
+
+	request headers：
+		Accept-Encoding: gzip,deflate
+		Connection: Keep-Alive
+		Content-Length: 123
+		Content-Type: application/x-www-form-urlencoded
+		Host: payment.mobzhifu.com
+		User-Agent: okhttp/4.1.1
+ 	
+ 	request body：
+		out_trade_no=LS201910042316543000002&paytype=1&token=ed48b416c0ad4ed6f790e3974204b806&sign=7DB45A1C67CD11C43D6BDF510C0745BE
+
+ 	response headers：
+ 		Access-Control-Allow-Headers: x-requested-with,content-type
+		Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE
+		Access-Control-Allow-Origin: *
+		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 72
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 15:17:53 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+
+	 response body： 
+	 	成功：没有处理
+	 	失败：没有处理
+
+
+9.Request URL:http://fw.lepay.vip/Pay/WxFacePay/cancelOrder 
+request headers：
+		Accept-Encoding: gzip,deflate
+		Connection: Keep-Alive
+		Content-Length: 123
+		Content-Type: application/x-www-form-urlencoded
+		Host: payment.mobzhifu.com
+		User-Agent: okhttp/4.1.1
+	request body：
+		out_trade_no=LS201910042316543000002&token=ed48b416c0ad4ed6f790e3974204b806&sign=CC98DCF37DF7DA7A86FEDDE683E4E15E
+
+	response headers：
+ 		Access-Control-Allow-Headers: x-requested-with,content-type
+		Access-Control-Allow-Methods: POST, GET, OPTIONS, PUT, DELETE
+		Access-Control-Allow-Origin: *
+		Connection: Upgrade, close
+		Content-Encoding: gzip
+		Content-Length: 72
+		Content-Type: application/json; charset=utf-8
+		Date: Fri, 04 Oct 2019 15:17:53 GMT
+		Server: Apache
+		Upgrade: h2
+		Vary: Accept-Encoding
+response body：
+	 		 {"code":"000000","data":{},"msg":"取消支付ß"}
+
+
+
+
+ 
+
+
+ 
