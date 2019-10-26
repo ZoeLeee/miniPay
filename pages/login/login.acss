@@ -1,0 +1,28 @@
+.header {
+  width: 100%;
+  display: block;
+  background-image: url("../../images/login/723c.png");
+  height: 400rpx;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.form{
+  padding: 60rpx;
+  flex: 1;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+}
+
+.form>input{
+  height: 60rpx;
+  line-height: 60rpx;
+  width: calc(100% - 20rpx);
+  margin-bottom: 30rpx;
+  padding: 10rpx;
+  outline: 1px solid #ccc;
+}
+.form>button{
+  margin-top: 50rpx;
+}

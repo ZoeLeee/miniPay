@@ -1,0 +1,7 @@
+<view>
+  <view class="bg"></view>
+  <my-title />
+  <view class="pay-button">
+    <button size="default" type="primary">收银</button>
+  </view>
+</view>

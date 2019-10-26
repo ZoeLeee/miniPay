@@ -1,0 +1,9 @@
+<view class="header">
+</view>
+<my-title />
+<view class="form">
+    <input onInput="usernameInput" class="input" placeholder="请输入手机号" value="{{username}}" />
+    <input class="input" onInput="passwordInput" placeholder="请输入密码"
+      password value="{{password}}" />
+    <button type="primary" onTap="loginBtnClick"  hoverClass="viewch">登录</button>
+</view>

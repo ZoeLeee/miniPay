@@ -1,0 +1,9 @@
+.title{
+  height: 60rpx;
+  text-align: center;
+}
+
+.title>image{
+  width:180rpx;
+  margin-right: 20rpx;
+}
