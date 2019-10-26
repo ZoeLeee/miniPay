@@ -1,0 +1,6 @@
+{
+  "defaultTitle": "收银台",
+   "usingComponents": {
+    "my-title":"/components/icon/icon"
+  }
+}

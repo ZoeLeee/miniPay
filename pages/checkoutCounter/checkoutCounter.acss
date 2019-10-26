@@ -1,0 +1,22 @@
+.bg{
+  background-image: url("../../images/home/banner.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 40vh;
+}
+.input{
+  padding: 30rpx 20rpx;
+  width: calc(100% - 40rpx);
+}
+.input>input{
+  text-align: right;
+  height: 50rpx;
+  line-height: 50rpx;
+  outline: 1px solid #00B7FD;
+  color: #00B7FD;
+  font-size: 60rpx;
+  background-image: url("../../images/zhi.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 0;
+}

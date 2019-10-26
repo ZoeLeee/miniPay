@@ -1,0 +1,23 @@
+<view class="main">
+  <button size="default">
+      <image mode="widthFix" src="../../images/sao.png"/>
+      <view>
+        <view>刷脸支付</view>
+        <view>Paying with Yours Face</view>
+      </view>
+  </button>
+  <button size="default">
+      <image mode="widthFix" src="../../images/sao.png"/>
+      <view>
+        <view>会员支付</view>
+        <view>Paying with Yours Membership</view>
+      </view>
+  </button>
+  <button size="default">
+      <image mode="widthFix" src="../../images/sao.png"/>
+      <view>
+        <view>扫码支付</view>
+        <view>Paying with Yours Scanning Code</view>
+      </view>
+  </button>
+</view>

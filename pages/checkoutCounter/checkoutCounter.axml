@@ -1,0 +1,5 @@
+<view class="bg"></view>
+<my-title />
+<view class="input">
+  <input class="input" type="digit" placeholder="输入金额" value="{{money}}" onInput="moneyInput" onConfirm="confirm" confirm-hold="{{true}}" ref="setInput" onBlur="blur" />
+</view>

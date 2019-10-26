@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/checkoutCounter/checkoutCounter",
+    "pages/memberPay/memberPay",
+    "pages/fastPay/fastPay",
     "pages/login/login",
     "pages/index/index"
   ],

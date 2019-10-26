@@ -1,0 +1,37 @@
+page {
+  height: 100%;
+  background: #02BAFF;
+}
+
+.main {
+  padding: 30rpx 20rpx;
+}
+
+.main>button{
+  margin: 20rpx 0;
+  height: 180rpx;
+  line-height: 180rpx;
+   display: flex;
+   align-items: center;
+   padding-left: 40rpx;
+}
+.main>button image{
+  width: 80rpx;
+}
+.main>button>view{
+  height: 60%;
+  line-height: 1;
+   padding: 20rpx;
+}
+.main>button>view>view{
+  height: 50%;
+  text-align: left;
+  line-height: 2;
+}
+.main>button>view>view:first-child{
+  font-weight: 5500;
+}
+
+.main>button>view>view:last-child{
+  font-size: 24rpx;
+}

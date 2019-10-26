@@ -1,0 +1,23 @@
+<view class="header">
+  <view>
+    <image mode="widthToFill" src=""/>
+  <view>
+    <text>text</text>
+    <text>text</text>
+  </view>
+  </view>
+  <view>
+    <view>
+      <text>2000</text>
+      <text>可用积分</text>
+    </view>
+    <view>
+      <text>2000</text>
+      <text>可用积分</text>
+    </view>
+    <view>
+      <text>2000</text>
+      <text>可用积分</text>
+    </view>
+  </view>
+</view>
