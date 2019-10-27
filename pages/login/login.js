@@ -1,5 +1,5 @@
-const myReq = require('../../utils/request');
-const { RequestStatus } = require("../../utils/enum");
+import { RequestStatus } from "../../utils/enum";
+import { myReq } from '/utils/request';
 
 const app = getApp();
 Page({
@@ -35,6 +35,9 @@ Page({
         username: this.data.username,
         password: this.data.password
       });
+
+      console.log(data);
+
       app.globalData.phonenumber = this.data.username;
       app.globalData.id = data.uid;
       app.globalData.storeid = data.storeid;

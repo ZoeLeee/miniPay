@@ -1,7 +1,3 @@
-const RequestStatus={
+export const RequestStatus={
   OK:1
-}
-
-module.exports={
-  RequestStatus
 }

@@ -1,6 +1,6 @@
 const HOST_URL="https://fw.lepay.vip/index.php/";
 
-function myReq(url,data={},option={}){
+export  function myReq(url,data={},option={}){
   let defaultData={
     url:HOST_URL+url,
     data,
@@ -20,5 +20,3 @@ function myReq(url,data={},option={}){
     },defaultData))
   })
 } 
-
-module.exports=myReq;

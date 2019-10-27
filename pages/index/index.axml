@@ -2,6 +2,6 @@
   <view class="bg"></view>
   <my-title />
   <view class="pay-button">
-    <button size="default" type="primary">收银</button>
+    <button size="default" type="primary" onTap="go">收银</button>
   </view>
 </view>
