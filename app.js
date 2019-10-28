@@ -8,7 +8,7 @@ App({
     // 从后台被 scheme 重新打开
     // options.query == {number:1}
   },
-  apiUrl: "https://fw.lepay.vip/index.php",
+  apiUrl: "https://fw.lepay.vip/index.php/",
   appid: "2019101568407032",
   XcxDatas: {
     formData: null,
