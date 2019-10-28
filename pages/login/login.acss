@@ -1,7 +1,7 @@
 .header {
   width: 100%;
   display: block;
-  background-image: url("../../images/login/723c.png");
+  background-image: url("../../images/home/banner.png");
   height: 400rpx;
   background-repeat: no-repeat;
   background-size: contain;

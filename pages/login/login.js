@@ -1,4 +1,4 @@
-import { RequestStatus } from "../../utils/enum";
+import { RequestStatus,RequestApi } from "../../utils/enum";
 import { myReq } from '/utils/request';
 
 const app = getApp();
@@ -31,12 +31,10 @@ Page({
       });
     }
     else {
-      let data = await myReq("Xcxapi/MerchantLogin/login", {
+      let data = await myReq(RequestApi.Login, {
         username: this.data.username,
         password: this.data.password
       });
-
-      console.log(data);
 
       app.globalData.phonenumber = this.data.username;
       app.globalData.id = data.uid;
