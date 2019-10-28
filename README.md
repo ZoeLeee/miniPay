@@ -8,14 +8,9 @@ url：https://fw.lepay.vip//index.php/Register/PayAndRefund/tofastpay
 money:1  
 code: 284236166272756154  
 merchantid:15  
-storied:460」  
+storeid:460
 ```
 
-## 登陆接口 ##
-```
-storeid 注意返回的用户信息
-
-```
 
 ## 小程序相关文档 ##
 

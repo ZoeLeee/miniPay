@@ -49,9 +49,8 @@ Page({
       money: app.globalData.payMoney,
       code,
       merchantid: app.globalData.merchantid,
-      storied: app.globalData.storeid
+      storeid: app.globalData.storeid
     });
-    console.log(res);
     if (res.status === RequestStatus.OK) {
       //扫码成功后的逻辑
       my.ix.startApp({
