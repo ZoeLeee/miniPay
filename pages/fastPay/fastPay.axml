@@ -1,5 +1,5 @@
 <view class="main">
-  <button size="default">
+  <button size="default" onTap="toFacePay">
       <image mode="widthFix" src="../../images/sao.png"/>
       <view>
         <view>刷脸支付</view>
@@ -13,7 +13,7 @@
         <view>Paying with Yours Membership</view>
       </view>
   </button>
-  <button size="default">
+  <button size="default" onTap="toScanPay">
       <image mode="widthFix" src="../../images/sao.png"/>
       <view>
         <view>扫码支付</view>

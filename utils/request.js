@@ -9,14 +9,16 @@ export  function myReq(url,data={},option={}){
       "content-type": "application/x-www-form-urlencoded;"
     },
   }
+  console.log("请求数据",defaultData);
   return new Promise((res,rej)=>{
-    my.request(Object.assign({
+    my.request({
+      ...defaultData,
       success(data){
         res(data.data);
       },
       fail(data){
         rej(data);
       }
-    },defaultData))
+    })
   })
 } 
