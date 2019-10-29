@@ -10,13 +10,14 @@ export  function myReq(url,data={},option={}){
     },
   }
   return new Promise((res,rej)=>{
-    my.request(Object.assign({
+    my.request({
+      ...defaultData,
       success(data){
         res(data.data);
       },
       fail(data){
         rej(data);
       }
-    },defaultData))
+    })
   })
 } 
