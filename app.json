@@ -1,10 +1,11 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/scanCode/scanCode",
     "pages/index/index",
+    "pages/fastPay/fastPay",
     "pages/checkoutCounter/checkoutCounter",
-    "pages/memberPay/memberPay",
-    "pages/fastPay/fastPay"
+    "pages/memberPay/memberPay"
   ],
   "window": {
     "defaultTitle": "乐脸付"

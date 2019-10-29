@@ -6,13 +6,13 @@
         <view>Paying with Yours Face</view>
       </view>
   </button>
-  <button size="default">
+  <!-- <button size="default">
       <image mode="widthFix" src="../../images/sao.png"/>
       <view>
         <view>会员支付</view>
         <view>Paying with Yours Membership</view>
       </view>
-  </button>
+  </button> -->
   <button size="default" onTap="toScanPay">
       <image mode="widthFix" src="../../images/sao.png"/>
       <view>
@@ -20,4 +20,12 @@
         <view>Paying with Yours Scanning Code</view>
       </view>
   </button>
+  <view class="modal" a:if="{{showModal}}">
+    <view>请选择支付方式</view>
+    <view>
+      <image mode="widthFix" src="../../images/s33.png" data-type="0" onTap="toScanCode" />
+      <image mode="widthFix" src="../../images/s32.png" data-type="1" onTap="toScanCode" />
+    </view>
+  </view>
+  <view class="masking" a:if="{{showModal}}" onTap="hideModal"></view>
 </view>

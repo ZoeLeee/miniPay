@@ -35,3 +35,41 @@ page {
 .main>button>view>view:last-child{
   font-size: 24rpx;
 }
+
+.modal{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 70%;
+  height: 30%;
+  text-align: center;
+  background: #fff;
+  z-index: 1;
+}
+.masking{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+.modal>view:first-child{
+  font-size: 40rpx;
+  padding: 40rpx 0;
+}
+.modal>view:nth-child(2){
+  display: flex;
+  justify-content: space-around;
+}
+
+.modal>view:nth-child(2) image{
+  width: 120rpx;
+}

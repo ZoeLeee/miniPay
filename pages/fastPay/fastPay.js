@@ -6,7 +6,8 @@ const app = getApp();
 
 Page({
   data: {
-    tradeNo: ""
+    tradeNo: "",
+    showModal: false
   },
   //刷脸支付
   async toFacePay() {
@@ -14,7 +15,19 @@ Page({
   },
   //前往扫码页面
   toScanPay() {
-    //TODO:
+    this.setData({
+      showModal: true
+    });
+  },
+  hideModal() {
+    this.setData({
+      showModal: false
+    })
+  },
+  toScanCode(e){
+    my.navigateTo({
+      url:"/pages/scanCode/scanCode?type="+e.target.dataset.type
+    });
   },
   startPay() {
     //设置随机流水
