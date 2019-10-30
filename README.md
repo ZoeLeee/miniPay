@@ -11,6 +11,34 @@ merchantid:15
 storeid:460
 ```
 
+## 支付宝二维码接口 ##
+``` 
+https://fw.lepay.vip/Pay/WxFacePay/qrCodePay
+请求方式 POST
+type  1 微信固定
+money  0.01
+stats  0 固定
+storeid	460
+
+```
+## wx二维码接口 ##
+``` 
+https://fw.lepay.vip/Pay/WxFacePay/qrCodePay
+请求方式 POST
+type  1 微信固定
+money  0.01
+stats  0 固定
+storeid	460
+
+```
+## 广告接口 ##
+``` 
+https://fw.lepay.vip/Pay/WxFacePay/getadvert
+POST
+storeid  460
+
+```
+
 
 ## 小程序相关文档 ##
 
