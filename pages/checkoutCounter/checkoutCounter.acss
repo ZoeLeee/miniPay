@@ -1,8 +1,19 @@
-.bg{
-  background-image: url("../../images/home/banner.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height:600rpx;
+page{
+  background: #fff;
+}
+swiper{
+  height: 200px !important;
+  overflow: hidden;
+}
+swiper-item{
+  background-color:#e0ffff;
+  overflow: hidden;
+}
+swiper-item image{
+  width: 100%;
+}
+.margin-t {
+  margin-top: 24px;
 }
 .input{
   padding: 30rpx 20rpx;
@@ -15,8 +26,37 @@
   outline: 1px solid #00B7FD;
   color: #00B7FD;
   font-size: 60rpx;
-  /* background-image: url("../../images/zhi.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 0;
+}
+
+.keyboard{
+  display: flex;
+  padding: 10rpx;
+}
+
+.keyboard>view:first-child{
+  width: 66%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.keyboard>view:first-child>view{
+  margin: 1%;
+  width: 23%;
+  height: 0;
+  padding-bottom: 23%;
+  background: #E6E6E6;
+  text-align: center;
+  font-size: 50rpx;
+  line-height: 2.3;
+}
+
+.keyboard>button{
+  flex: 1;
+  height: auto;
+  margin: 1%;
+  background: #00BAFF;
+  line-height: 10;
 }

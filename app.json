@@ -1,10 +1,10 @@
 {
   "pages": [
     "pages/login/login",
+    "pages/checkoutCounter/checkoutCounter",
     "pages/scanCode/scanCode",
     "pages/index/index",
     "pages/fastPay/fastPay",
-    "pages/checkoutCounter/checkoutCounter",
     "pages/memberPay/memberPay"
   ],
   "window": {

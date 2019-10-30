@@ -9,6 +9,7 @@ export const RequestApi={
   Pay:HOST_URL+"Register/PayAndRefund/tofastpay",
   Login:HOST_URL+"Xcxapi/MerchantLogin/login",
   Code:CODE_URL+ "qrCodePay",
+  Banner:CODE_URL+"getadvert",
 }
 
 export const PayType={

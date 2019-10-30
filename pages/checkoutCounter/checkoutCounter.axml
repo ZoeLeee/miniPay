@@ -1,5 +1,19 @@
-<view class="bg"></view>
+<swiper previousMargin="0" nextMargin="0" autoplay="{{true}}" interval="{{3000}}" circular="{{true}}">
+  <block a:for="{{images}}">
+    <swiper-item key="swiper-item-{{index}}">
+      <image mode="widthFix" src="{{item}}"/>
+    </swiper-item>
+  </block>
+</swiper>
 <my-title />
 <view class="input">
-  <input class="input" type="number" placeholder="输入金额" value="{{money}}" onInput="moneyInput" onConfirm="confirm" onBlur="blur" />
+  <input class="input" type="number" placeholder="输入金额" value="{{money}}" onInput="moneyInput" onConfirm="confirm" onBlur="blur" disabled />
+</view>
+<view class="keyboard">
+  <view>
+    <block a:for="{{list}}">
+      <view onTap="moneyInput" data-value="{{item.text}}">{{item.text}}</view>
+    </block>
+  </view>
+  <button size="default" type="primary" onTap="toPay">确定</button>
 </view>

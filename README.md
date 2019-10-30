@@ -15,7 +15,7 @@ storeid:460
 ``` 
 https://fw.lepay.vip/Pay/WxFacePay/qrCodePay
 请求方式 POST
-type  1 微信固定
+type  2 支付宝固定
 money  0.01
 stats  0 固定
 storeid	460

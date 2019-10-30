@@ -1,9 +1,9 @@
 .title{
   height: 60rpx;
   text-align: center;
-}
-
-.title>image{
-  width:180rpx;
-  margin-right: 20rpx;
+  width: 100%;
+  background-image: url("../../images/title.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
