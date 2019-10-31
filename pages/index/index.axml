@@ -1,5 +1,6 @@
-<view class="bg"></view>
-<my-title />
-<view class="pay-button">
-  <button size="default" type="primary" onTap="go">收银</button>
-</view>
+<navigator url="">
+  <image mode="widthFix" src="../../images/link.jpg"/>
+  </navigator>
+<navigator url="/pages/checkoutCounter/checkoutCounter" open-type="redirect">
+  <image mode="widthFix" src="../../images/duli.jpg"/>
+</navigator>

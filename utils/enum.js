@@ -16,3 +16,10 @@ export const PayType={
   My:"0",
   Wx:"1",
 }
+
+export const UseMode={
+  Link:"0",
+  NoLink:"1",
+}
+
+export const USE_MODE_KEY="useMode";

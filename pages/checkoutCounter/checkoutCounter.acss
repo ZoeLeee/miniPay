@@ -22,15 +22,23 @@ swiper-item image{
 .input>input{
   text-align: right;
   height: 50rpx;
-  line-height: 50rpx;
+  line-height: 40rpx;
   outline: 1px solid #00B7FD;
   color: #00B7FD;
   font-size: 60rpx;
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 0;
+  position: relative;
 }
-
+.input>input::after{
+  content: "￥";
+  color: #000;
+  font-weight: 400;
+  position: absolute;
+  left: 20rpx;
+  top: 40rpx;
+}
 .keyboard{
   display: flex;
   padding: 10rpx;

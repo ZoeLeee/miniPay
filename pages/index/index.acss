@@ -1,11 +1,7 @@
-.bg{
-  background-image: url("../../images/home/banner.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 60vh;
+page{
+  background: #fff;
 }
-
-.pay-button{
-   padding:0 20rpx;
-   margin-top: 100rpx;
+image{
+  width: 100%;
+  margin-bottom: 10rpx;
 }

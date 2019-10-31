@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/login/login",
     "pages/checkoutCounter/checkoutCounter",
     "pages/scanCode/scanCode",
-    "pages/index/index",
     "pages/fastPay/fastPay",
     "pages/memberPay/memberPay"
   ],
@@ -12,10 +12,7 @@
   },
   "tabBar": {
     "items": [
-      {
-        "pagePath": "pages/index/index",
-        "name": ""
-      }
+     
     ]
   }
 }

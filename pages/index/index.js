@@ -1,10 +1,19 @@
+import {UseMode,USE_MODE_KEY} from '/utils/enum';
+
 Page({
-  go(){
-    my.navigateTo({url:"/pages/checkoutCounter/checkoutCounter"});
-  },
   onLoad(query) {
-    // 页面加载
-    console.info(`Page onLoad with query: ${JSON.stringify(query)}`);
+    let mode = my.getStorageSync({ key:USE_MODE_KEY}).data;
+    if (mode === UseMode.Link) {
+
+    }
+    else if (mode === UseMode.NoLink) {
+      my.redirectTo({
+        url:  "/pages/checkoutCounter/checkoutCounter"
+      });
+    }
+    else {
+
+    }
   },
   onReady() {
     // 页面加载完成
