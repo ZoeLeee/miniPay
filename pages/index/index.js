@@ -7,8 +7,8 @@ Page({
 
     }
     else if (mode === UseMode.NoLink) {
-      my.redirectTo({
-        url:  "/pages/checkoutCounter/checkoutCounter"
+      my.reLaunch({
+        url:  "/pages/login/login"
       });
     }
     else {

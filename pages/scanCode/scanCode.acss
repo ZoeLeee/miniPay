@@ -1,13 +1,45 @@
+page{
+  background: #00BAFF;
+}
 view{
+  text-align: center;
+}
+.scanCode{
   position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
+  top: 180rpx;
+  left: 25%;
   width: 50%;
   height: 50%;
-  margin: auto;
+  margin:0 auto;
 }
 image{
   width: 100%;
+}
+.footer{
+  position: fixed;
+  height: 200rpx;
+  bottom: 0;
+  width: 100%;
+  background: #F8F8F8;
+  padding-top: 40rpx;
+}
+.money{
+  font-size: 44rpx;
+  color: #fff;
+  padding: 20rpx 0;
+  font-weight: 550;
+}
+.time{
+  color: #fff;
+}
+.footer>button{
+  position: absolute;
+  right: 30rpx;
+  top: -60rpx;
+  font-size: 24rpx;
+  color: #00BAFF;
+  border-radius: 10rpx;
+  height: 40rpx;
+  line-height: 1;
+  padding: 10rpx;
 }

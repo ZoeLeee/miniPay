@@ -91,5 +91,10 @@ Page({
   onLoad() { },
   onUnload() {
     my.ix.offCashierEventReceive();
+  },
+  onShow(){
+    this.setData({
+      showModal: false
+    })
   }
 });

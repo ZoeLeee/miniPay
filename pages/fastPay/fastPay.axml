@@ -1,9 +1,9 @@
 <view class="main">
   <button size="default" onTap="toFacePay">
-      <image mode="widthFix" src="../../images/sao.png"/>
+      <image mode="widthFix" src="../../images/face.png"/>
       <view>
-        <view>刷脸支付</view>
-        <view>Paying with Yours Face</view>
+        <view>刷脸支付/出示付款码支付</view>
+        <view>Paying with Yours Face / showing payment code</view>
       </view>
   </button>
   <!-- <button size="default">
@@ -14,7 +14,7 @@
       </view>
   </button> -->
   <button size="default" onTap="toScanPay">
-      <image mode="widthFix" src="../../images/sao.png"/>
+      <image mode="widthFix" src="../../images/scan.png"/>
       <view>
         <view>扫码支付</view>
         <view>Paying with Yours Scanning Code</view>

@@ -2,9 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/login/login",
-    "pages/checkoutCounter/checkoutCounter",
     "pages/scanCode/scanCode",
     "pages/fastPay/fastPay",
+    "pages/checkoutCounter/checkoutCounter",
     "pages/memberPay/memberPay"
   ],
   "window": {

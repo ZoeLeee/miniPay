@@ -1,5 +1,5 @@
 .title{
-  height: 60rpx;
+  height: 80rpx;
   text-align: center;
   width: 100%;
   background-image: url("../../images/title.jpg");

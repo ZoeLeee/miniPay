@@ -1,6 +1,6 @@
 <navigator url="">
   <image mode="widthFix" src="../../images/link.jpg"/>
   </navigator>
-<navigator url="/pages/checkoutCounter/checkoutCounter" open-type="redirect">
+<navigator url="/pages/login/login" open-type="redirect">
   <image mode="widthFix" src="../../images/duli.jpg"/>
 </navigator>

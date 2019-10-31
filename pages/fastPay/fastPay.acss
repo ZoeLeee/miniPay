@@ -16,7 +16,8 @@ page {
    padding-left: 40rpx;
 }
 .main>button image{
-  width: 80rpx;
+  width:80rpx;
+  height: 80rpx !important;
 }
 .main>button>view{
   height: 60%;

@@ -17,11 +17,6 @@ Page({
       password: c.detail.value.trim()
     });
   },
-  resetPassword: function() {
-    wx2my.navigateTo({
-      url: "../reset/reset"
-    });
-  },
   async loginBtnClick(c) {
     if (!this.data.username || !this.data.password) {
       my.showToast({
@@ -44,8 +39,8 @@ Page({
       app.globalData.username = data.username;
       app.globalData.right_of_withdrawal = data.right_of_withdrawal;
       if (data.status === RequestStatus.OK) {
-        my.switchTab({
-          url: "../index/index"
+        my.reLaunch({
+          url: "/pages/checkoutCounter/checkoutCounter"
         })
       }
       else {
