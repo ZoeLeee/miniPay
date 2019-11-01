@@ -1,5 +1,5 @@
 Page({
-  data: {},
+  data: {time:3},
   back() {
     my.reLaunch({
       url: "/pages/checkoutCounter/checkoutCounter"
@@ -7,12 +7,14 @@ Page({
   },
   timeId:undefined,
   onLoad() {
-    this.timeId= setTimeout(() => {
-      this.back();
-    }, 10000)
+    this.timeId= setInterval(() => {
+      if(this.data.time-1===0)
+        this.back();
+      this.setData({time:this.data.time-1});
+    }, 1000)
   },
   onUnload(){
     if(this.timeId)
-      clearTimeout(this.timeId)
+      clearInterval(this.timeId)
   }
 });

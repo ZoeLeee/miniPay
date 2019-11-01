@@ -14,6 +14,9 @@
   padding: 30rpx;
   font-size: 40rpx;
 }
+.main>view:nth-child(3){
+  color: #108EE9;
+}
 
 .main button{
   width: 100%;
