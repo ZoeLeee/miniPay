@@ -5,14 +5,13 @@
     "pages/scanCode/scanCode",
     "pages/fastPay/fastPay",
     "pages/checkoutCounter/checkoutCounter",
+    "pages/paySuccess/paySuccess",
     "pages/memberPay/memberPay"
   ],
   "window": {
     "defaultTitle": "乐脸付"
   },
   "tabBar": {
-    "items": [
-     
-    ]
+    "items": []
   }
 }

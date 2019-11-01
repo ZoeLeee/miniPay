@@ -2,7 +2,7 @@ page{
   background: #fff;
 }
 swiper{
-  height: 200px !important;
+  height: 240px !important;
   overflow: hidden;
 }
 swiper-item{

@@ -1,0 +1,5 @@
+<view class="main">
+  <icon type="success" size="60"></icon>
+  <view>您已完成支付</view>
+  <button size="mini" type="primary" onTap="back">知道了</button>
+</view>

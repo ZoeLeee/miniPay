@@ -1,5 +1,5 @@
 import getTradeNo from '/utils/getTradeNo';
-import { RequestStatus, RequestApi } from "../../utils/enum";
+import { RequestStatus, RequestApi,PayType } from "../../utils/enum";
 import { myReq } from '/utils/request';
 
 const app = getApp();
@@ -15,8 +15,11 @@ Page({
   },
   //前往扫码页面
   toScanPay() {
-    this.setData({
-      showModal: true
+    // this.setData({
+    //   showModal: true
+    // });
+    my.navigateTo({
+      url:"/pages/scanCode/scanCode?type="+PayType.My
     });
   },
   hideModal() {

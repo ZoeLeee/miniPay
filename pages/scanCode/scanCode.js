@@ -1,5 +1,6 @@
 import { RequestStatus, RequestApi, PayType } from "/utils/enum";
 import { myReq } from '/utils/request';
+import { wait } from '/utils/utils';
 
 const app = getApp();
 Page({
@@ -10,10 +11,11 @@ Page({
     time: 60,
     type: "",
     title: "",
+    trade_no: "",
   },
   async tabScanCodeType() {
     this.setData({
-      type: this.data.type === PayType.My ? PayType.Wx: PayType.My,
+      type: this.data.type === PayType.My ? PayType.Wx : PayType.My,
       title: this.data.type === PayType.My ? "支付宝" : "微信",
       time: 60,
     });
@@ -27,14 +29,17 @@ Page({
       storeid: app.globalData.storeid
     })
     if (data.status === RequestStatus.OK || data.code === "000000") {
+      //记录当前订单号
+      this.setData({
+        trade_no: data.result ? data.result.out_trade_no : data.data.out_trade_no
+      });
       if (my.canIUse('ix.generateImageFromCode')) {
         my.ix.generateImageFromCode({
-          code: data.result? data.result.qr_code: data.data.qrcode,
+          code: data.result ? data.result.qr_code : data.data.qrcode,
           format: 'QRCODE',
           width: 200,
           correctLevel: 'H',
           success: (r) => {
-            console.log(r);
             this.setData({ qrcode: r.image });
           }
         });
@@ -60,6 +65,28 @@ Page({
       });
     }
   },
+  async watchPayResult() {
+    while (this.data.time > 0) {
+      let query = { out_trade_no: this.data.trade_no };
+      let url;
+      if (this.data.type === PayType.My) {
+        url = RequestApi.MyPayRes;
+      }
+      else {
+        url = RequestApi.WxPayRes;
+        query.storeid = app.globalData.storeid;
+      }
+      await wait(3);
+      let data = await myReq(url,query);
+      if(data.code==="000000"){
+        if(data.data.code==="10000"||data.data.order_state==="SUCCESS")
+        break;
+      }
+    }
+    my.navigateTo({
+      url:"/pages/paySuccess/paySuccess"
+    });
+  },
   async onLoad(query) {
     this.setData({
       money: app.globalData.payMoney,
@@ -75,11 +102,14 @@ Page({
           url: "/pages/checkoutCounter/checkoutCounter",
         });
       this.setData({ time });
-    }, 1000)
+    }, 1000);
+
+    this.watchPayResult();
   },
   onUnload() {
     if (this.timeId) {
       clearInterval(this.timeId);
-    }
+    };
+    this.setData({time:0});
   }
 });

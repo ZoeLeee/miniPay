@@ -10,6 +10,8 @@ export const RequestApi={
   Login:HOST_URL+"Xcxapi/MerchantLogin/login",
   Code:CODE_URL+ "qrCodePay",
   Banner:CODE_URL+"getadvert",
+  MyPayRes:CODE_URL+"aliQueryOrder",
+  WxPayRes:CODE_URL+"queryOrder",
 }
 
 export const PayType={
