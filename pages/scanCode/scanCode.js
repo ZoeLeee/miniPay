@@ -79,7 +79,7 @@ Page({
       await wait(3);
       let data = await myReq(url,query);
       if(data.code==="000000"){
-        if(data.data.code==="10000"||data.data.order_state==="SUCCESS")
+        if(data.data.trade_status==="TRADE_SUCCESS"||data.data.order_state==="SUCCESS")
         break;
       }
     }
