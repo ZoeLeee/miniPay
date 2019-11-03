@@ -126,3 +126,4 @@ storeid  460
 支付宝小程序相关 https://opendocs.alipay.com/mini/framework  
 
 发布调试： https://opendocs.alipay.com/mini/multi-platform/vcs0fv
+第三方服务文档 https://www.bookstack.cn/read/alipay-mini-3rd/auth-step1.md
