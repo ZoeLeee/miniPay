@@ -6,7 +6,7 @@ const app = getApp();
 Page({
   timeId: null,
   data: {
-    qrcode: "/images/testCode.png",
+    qrcode: "",
     money: "0",
     time: 60,
     type: "",
@@ -52,6 +52,7 @@ Page({
             my.navigateBack();
           }
         });
+        this.setData({ time: 0 });
       }
     }
     else {
@@ -77,14 +78,14 @@ Page({
         query.storeid = app.globalData.storeid;
       }
       await wait(3);
-      let data = await myReq(url,query);
-      if(data.code==="000000"){
-        if(data.data.trade_status==="TRADE_SUCCESS"||data.data.order_state==="SUCCESS")
-        break;
+      let data = await myReq(url, query);
+      if (data.code === "000000") {
+        if (data.data.trade_status === "TRADE_SUCCESS" || data.data.order_state === "SUCCESS")
+          break;
       }
     }
     my.navigateTo({
-      url:"/pages/paySuccess/paySuccess"
+      url: "/pages/paySuccess/paySuccess"
     });
   },
   async onLoad(query) {
@@ -110,6 +111,6 @@ Page({
     if (this.timeId) {
       clearInterval(this.timeId);
     };
-    this.setData({time:0});
+    this.setData({ time: 0 });
   }
 });

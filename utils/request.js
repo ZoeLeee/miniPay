@@ -17,6 +17,10 @@ export  function myReq(url,data={},option={}){
         res(data.data);
       },
       fail(data){
+        my.alert({
+          title: '错啦',
+          content:JSON.stringify(data) 
+        });
         rej(data);
       }
     })

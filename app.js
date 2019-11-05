@@ -10,7 +10,7 @@ App({
     console.error(err);
   },
   apiUrl: "https://fw.lepay.vip/index.php/",
-  appid: "2019101568407032",
+  appid: "2019110568883557",
   XcxDatas: {
     formData: null,
     userInfo: "",
