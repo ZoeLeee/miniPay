@@ -1,5 +1,5 @@
 import getTradeNo from '/utils/getTradeNo';
-import { RequestStatus, RequestApi,PayType } from "../../utils/enum";
+import { RequestStatus, RequestApi, PayType } from "../../utils/enum";
 import { myReq } from '/utils/request';
 
 const app = getApp();
@@ -11,7 +11,14 @@ Page({
   },
   //刷脸支付
   async toFacePay() {
-    await this.startPay();
+    if (Number(app.globalData.payMoney) > 5000) {
+      my.showToast({
+        type: 'exception',
+        content: '刷脸支付金额不能大于5000元，请选择扫码支付方式',
+      });
+    }
+    else
+      await this.startPay();
   },
   //前往扫码页面
   toScanPay() {
@@ -19,7 +26,7 @@ Page({
     //   showModal: true
     // });
     my.navigateTo({
-      url:"/pages/scanCode/scanCode?type="+PayType.My
+      url: "/pages/scanCode/scanCode?type=" + PayType.My
     });
   },
   hideModal() {
@@ -27,9 +34,9 @@ Page({
       showModal: false
     })
   },
-  toScanCode(e){
+  toScanCode(e) {
     my.navigateTo({
-      url:"/pages/scanCode/scanCode?type="+e.target.dataset.type
+      url: "/pages/scanCode/scanCode?type=" + e.target.dataset.type
     });
   },
   startPay() {
@@ -46,8 +53,14 @@ Page({
       faceLoadingTimeout: "5",
       showScanPayResult: true,
       success: async (r) => {
-        await this.pay(r.barCode);
-
+        if (!isNaN(Number(r.code)))
+          await this.pay(r.barCode);
+        else {
+          my.showToast({
+            type: 'fail',
+            content: '请出示正确的付款码',
+          });
+        }
       }
     });
     my.ix.onCashierEventReceive((r) => {
@@ -85,9 +98,6 @@ Page({
         type: 'exception',
         content: res.msg,
         duration: 3000,
-        success: () => {
-
-        },
       });
     }
   },
@@ -95,7 +105,7 @@ Page({
   onUnload() {
     my.ix.offCashierEventReceive();
   },
-  onShow(){
+  onShow() {
     this.setData({
       showModal: false
     })

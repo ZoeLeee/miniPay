@@ -9,7 +9,6 @@ export  function myReq(url,data={},option={}){
       "content-type": "application/x-www-form-urlencoded;"
     },
   }
-  console.log("请求数据",defaultData)
   return new Promise((res,rej)=>{
     my.request({
       ...defaultData,
@@ -17,10 +16,6 @@ export  function myReq(url,data={},option={}){
         res(data.data);
       },
       fail(data){
-        my.alert({
-          title: '错啦',
-          content:JSON.stringify(data) 
-        });
         rej(data);
       }
     })
