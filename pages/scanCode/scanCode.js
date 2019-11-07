@@ -16,7 +16,6 @@ Page({
   async tabScanCodeType() {
     this.setData({
       type: this.data.type === PayType.My ? PayType.Wx : PayType.My,
-      title: this.data.type === PayType.My ? "支付宝" : "微信",
       time: 60,
     });
     await this.getCode();
@@ -92,7 +91,6 @@ Page({
     this.setData({
       money: app.globalData.payMoney,
       type: query.type,
-      title: query.type === PayType.My ? "微信" : "支付宝"
     })
     await this.getCode();
 

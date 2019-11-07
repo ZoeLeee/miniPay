@@ -5,5 +5,5 @@
 </view>
 <view class="footer">
   <my-title />
-  <button size="default" onTap="tabScanCodeType">切换{{title}}扫码</button>
+  <button size="default" onTap="tabScanCodeType">切换扫码</button>
 </view>
