@@ -53,7 +53,7 @@ Page({
       faceLoadingTimeout: "5",
       showScanPayResult: true,
       success: async (r) => {
-        if (!isNaN(Number(r.code)))
+        if (!isNaN(Number(r.barCode)))
           await this.pay(r.barCode);
         else {
           my.showToast({
