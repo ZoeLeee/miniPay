@@ -2,6 +2,10 @@ App({
   onLaunch(options) {
     // 第一次打开
     // options.query == {number:1}
+    let r = my.ix.getSysPropSync({key: 'ro.serialno'});
+    if(r){
+      this.globalData.sn=r.value;
+    }
   },
   onShow(options) {
    
