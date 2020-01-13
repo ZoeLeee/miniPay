@@ -1,7 +1,7 @@
 <swiper previousMargin="0" nextMargin="0" autoplay="{{true}}" interval="{{3000}}" circular="{{true}}">
   <block a:for="{{images}}">
     <swiper-item key="swiper-item-{{index}}">
-      <image mode="widthFix" src="{{item}}"/>
+      <image mode="widthFix" src="../../images/body.png"/>
     </swiper-item>
   </block>
 </swiper>

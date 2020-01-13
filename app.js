@@ -13,14 +13,14 @@ App({
   onError(err) {
     console.error(err);
   },
-  apiUrl: "https://fw.lepay.vip/index.php/",
-  appid: "2019110568883557",
+  apiUrl: "https://xmfw.lepay.vip/index.php/",
+  appid: "2019120469573920",
   XcxDatas: {
     formData: null,
     userInfo: "",
-    imgUrl: "https://fw.lepay.vip/",
-    defaultPhoto: "https://fw.lepay.vip/",
-    siteBaseUrl: "https://fw.lepay.vip//index.php",
+    imgUrl: "https://xmfw.lepay.vip/",
+    defaultPhoto: "https://xmfw.lepay.vip/",
+    siteBaseUrl: "https://xmfw.lepay.vip//index.php",
     shop_id: "",
     xcx_id: "",
     tmp_id: "",

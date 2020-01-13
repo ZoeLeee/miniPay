@@ -9,7 +9,7 @@
     "pages/memberPay/memberPay"
   ],
   "window": {
-    "defaultTitle": "乐脸付"
+    "defaultTitle": "享脸付"
   },
   "tabBar": {
     "items": []

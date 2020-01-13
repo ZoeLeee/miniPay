@@ -2,7 +2,7 @@
   height: 80rpx;
   text-align: center;
   width: 100%;
-  background-image: url("../../images/title.jpg");
+  background-image: url("../../images/title.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center;

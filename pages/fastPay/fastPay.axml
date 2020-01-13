@@ -3,7 +3,7 @@
       <image mode="widthFix" src="../../images/face.png"/>
       <view>
         <view>刷脸支付/出示付款码支付</view>
-        <view>Paying with Yours Face / showing payment code</view>
+        <view>Pay by brushing face / showing payment code  </view>
       </view>
   </button>
   <!-- <button size="default">
@@ -16,8 +16,8 @@
   <button size="default" onTap="toScanPay">
       <image mode="widthFix" src="../../images/scan.png"/>
       <view>
-        <view>扫码支付</view>
-        <view>Paying with Yours Scanning Code</view>
+        <view>扫商家码支付</view>
+        <view>Payment by scanning merchant code  </view>
       </view>
   </button>
   <!-- <view class="modal" a:if="{{showModal}}">

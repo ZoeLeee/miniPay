@@ -1,7 +1,9 @@
-<view class="scanCode">
- <image mode="widthFix" src="{{qrcode}}"/>
- <view class="money">￥{{money}}</view>
- <view class="time">请在{{time}}秒内完成支付</view>
+<view class="main">
+  <view class="scanCode">
+  <image mode="widthFix" src="{{qrcode}}"/>
+  <view class="money">￥{{money}}</view>
+  <view class="time">请在{{time}}秒内完成支付</view>
+  </view>
 </view>
 <view class="footer">
   <my-title />
