@@ -15,5 +15,8 @@
       <view onTap="moneyInput" data-value="{{item.text}}">{{item.text}}</view>
     </block>
   </view>
-  <button size="default" type="primary" onTap="toPay">确定</button>
+  <view>
+    <button size="default" type="primary" onTap="toFacePay">刷脸</button>
+    <button size="default" type="primary" onTap="toScan">扫码</button>
+  </view>
 </view>

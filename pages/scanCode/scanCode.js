@@ -109,6 +109,5 @@ Page({
     if (this.timeId) {
       clearInterval(this.timeId);
     };
-    this.setData({ time: 0 });
   }
 });

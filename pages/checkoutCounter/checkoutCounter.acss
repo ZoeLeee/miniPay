@@ -60,11 +60,12 @@ swiper-item image{
   font-size: 50rpx;
   line-height: 2.3;
 }
-
-.keyboard>button{
+.keyboard>view:last-child{
   flex: 1;
-  height: auto;
-  margin: 1%;
+  margin: 0 1%;
+}
+.keyboard>view:last-child>button{
+  height: 50%;
   background: #00BAFF;
-  line-height: 10;
+  line-height: 5;
 }

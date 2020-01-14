@@ -4,8 +4,8 @@ import { myReq } from '/utils/request';
 const app = getApp();
 Page({
   data: {
-    username: "",
-    password: "",
+    username: "18544440000",
+    password: "440000",
   },
   usernameInput: function(c) {
     this.setData({
