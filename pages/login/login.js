@@ -52,5 +52,10 @@ Page({
       }
     }
   },
+  onReady(){
+    if (my.canIUse('hideBackHome')) {
+      my.hideBackHome();
+    }
+  },
   onLoad() { },
 });

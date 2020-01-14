@@ -222,7 +222,9 @@ Page({
     });
 
   },
-  onUnload() {
-    console.log(this);
-  }
+  onReady(){
+    if (my.canIUse('hideBackHome')) {
+      my.hideBackHome();
+    }
+  },
 });
